@@ -1,0 +1,46 @@
+.button {
+  border-radius: 5px;
+  background-color: #7261ff;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto 0;
+  padding: 12px 16px;
+}
+
+.buttonContent {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  justify-content: center;
+}
+
+.buttonText {
+  color: #fff;
+  text-align: right;
+  align-self: stretch;
+  margin: auto 0;
+  font: 500 14px/2 Poppins, sans-serif;
+}
+
+.buttonIcon {
+  align-self: stretch;
+  display: flex;
+  min-height: 24px;
+  align-items: center;
+  gap: 24px;
+  justify-content: center;
+  width: 24px;
+  margin: auto 0;
+}
+
+.buttonIconImage {
+  aspect-ratio: 1.11;
+  object-fit: contain;
+  object-position: center;
+  width: 10px;
+  align-self: stretch;
+  margin: auto 0;
+}

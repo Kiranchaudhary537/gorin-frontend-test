@@ -1,0 +1,95 @@
+.header {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 40px 100px;
+  color: #18181b;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 24px 150px;
+  font: 400 14px/2 Poppins, sans-serif;
+}
+
+@media (max-width: 991px) {
+  .header {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+}
+
+.logo {
+  aspect-ratio: 4.52;
+  object-fit: contain;
+  object-position: center;
+  width: 131px;
+  margin: auto 0;
+}
+
+.menuOptions {
+  display: flex;
+  align-items: center;
+  gap: 40px 41px;
+  justify-content: flex-start;
+  margin: auto 0;
+}
+
+.navLinks {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 20px;
+  justify-content: space-between;
+  margin: auto;
+}
+
+.navItem {
+  flex-grow: 0;
+  margin: auto;
+}
+
+.loginButton {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #18181b;
+  font-weight: 500;
+  white-space: nowrap;
+  text-align: right;
+  justify-content: center;
+  margin: auto;
+}
+
+@media (max-width: 991px) {
+  .loginButton {
+    white-space: initial;
+  }
+}
+
+.loginIcon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 14px;
+  margin: auto 0;
+}
+
+.tryFreeButton {
+  border-radius: 5px;
+  background-color: #7261ff;
+  gap: 10px;
+  color: #ffffff;
+  font-weight: 500;
+  padding: 8px 20px;
+  border: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
