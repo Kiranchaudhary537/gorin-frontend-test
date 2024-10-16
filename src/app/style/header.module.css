@@ -2,49 +2,51 @@
   display: flex;
   width: 100%;
   align-items: center;
-  gap: 40px 100px;
-  color: #18181b;
   justify-content: space-between;
-  flex-wrap: wrap;
   padding: 24px 150px;
   font: 400 14px/2 Poppins, sans-serif;
-}
-
-@media (max-width: 991px) {
-  .header {
-    max-width: 100%;
-    padding: 0 20px;
-  }
+  color: #18181b;
 }
 
 .logo {
-  aspect-ratio: 4.52;
-  object-fit: contain;
-  object-position: center;
   width: 131px;
-  margin: auto 0;
+  height: auto;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #18181b;
+  margin: 3px 0;
+  transition: 0.4s;
+}
+
+.bar.open:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.bar.open:nth-child(2) {
+  opacity: 0;
+}
+
+.bar.open:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
 }
 
 .menuOptions {
   display: flex;
-  align-items: center;
-  gap: 40px 41px;
-  justify-content: flex-start;
-  margin: auto 0;
 }
 
 .navLinks {
   display: flex;
-  width: 100%;
   align-items: center;
   gap: 20px;
-  justify-content: space-between;
-  margin: auto;
-}
-
-.navItem {
-  flex-grow: 0;
-  margin: auto;
 }
 
 .loginButton {
@@ -53,43 +55,66 @@
   gap: 5px;
   color: #18181b;
   font-weight: 500;
-  white-space: nowrap;
-  text-align: right;
   justify-content: center;
-  margin: auto;
-}
-
-@media (max-width: 991px) {
-  .loginButton {
-    white-space: initial;
-  }
 }
 
 .loginIcon {
-  aspect-ratio: 1;
-  object-fit: contain;
-  object-position: center;
   width: 14px;
-  margin: auto 0;
+  height: 14px;
 }
 
 .tryFreeButton {
   border-radius: 5px;
   background-color: #7261ff;
-  gap: 10px;
   color: #ffffff;
   font-weight: 500;
   padding: 8px 20px;
   border: none;
+  cursor: pointer;
 }
 
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
+@media (max-width: 991px) {
+  .header {
+    padding: 24px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .menuOptions {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
+    transition: max-height 0.3s ease-out;
+    overflow: hidden;
+  }
+
+  .menuOptions.closed {
+    max-height: 0;
+  }
+
+  .menuOptions.open {
+    max-height: 300px;
+  }
+
+  .navLinks {
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .navItem,
+  .loginButton,
+  .tryFreeButton {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
 }

@@ -149,15 +149,14 @@
   transition: all 0.3s ease-in-out;
   cursor: pointer;
 }
+.button:hover {
+  background-color: #5a4ae6;
+  border-color: #5a4ae6;
+}
 
 .buttonPrimary {
   background-color: #7261ff;
   color: #fff;
-}
-
-.buttonPrimary:hover {
-  background-color: #5a4ae6;
-  border-color: #5a4ae6;
 }
 
 .buttonSecondary {
